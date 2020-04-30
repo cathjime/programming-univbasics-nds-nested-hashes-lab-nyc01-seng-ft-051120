@@ -7,19 +7,32 @@ KATE_G = { name:  "Kate Gompert", occupation: "None" }
 BRUCE_G = { name:  "Bruce Green", occupation: "Fan of Mildred" }
 
 def assembled_aoh
-  # Build an array that contains (or, "nests") the constants into a single
-  # Array. Ruby constants are denoted by ALL_CAPS
+  nestled = [
+    { name:  "Don Gately", occupation: "Live-in Staff" },
+    { name:  "Joelle van Dyne", occupation: "Radio Personality" }, 
+    { name:  "Pat Monteseian", occupation: "Staff" },
+    { name:  "Kate Gompert", occupation: "None" },
+    { name:  "Bruce Green", occupation: "Fan of Mildred" }
+   ]
+
+  nestled 
 end
 
 def literal_aoh
-  # Using Array literal syntax only, build a nested array that uses the data in
-  # held in the constants
+  person_1 = { name:  "Don Gately", occupation: "Live-in Staff" }
+  person_2 = { name:  "Joelle van Dyne", occupation: "Radio Personality" }
+  person_3 = { name:  "Pat Monteseian", occupation: "Staff" }
+  person_4 = { name:  "Kate Gompert", occupation: "None" }
+  person_5 = { name:  "Bruce Green", occupation: "Fan of Mildred" }
+  
+  new_arr = [person_1, person_2, person_3, person_4, person_5]
 end
 
 def aoh_lookup(aoh, row, key)
+  aoh[row][key]
 end
 
 def aoh_update(aoh, row, key, new_value)
-  # Update the AoH data at row and key to have the value of new_value
-  # Return the updated AoH
+  aoh[row][key] = new_value
+  aoh 
 end
