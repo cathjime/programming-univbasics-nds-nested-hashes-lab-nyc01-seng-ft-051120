@@ -19,20 +19,13 @@ def assembled_aoh
 end
 
 def literal_aoh
-  new = Array.new
-  new = [
-    { name:  "Don Gately", occupation: "Live-in Staff" },
-    { name:  "Joelle van Dyne", occupation: "Radio Personality" }, 
-    { name:  "Pat Monteseian", occupation: "Staff" },
-    { name:  "Kate Gompert", occupation: "None" },
-    { name:  "Bruce Green", occupation: "Fan of Mildred" }
-   ]
-    sorted = new.sort
-    
-    sorted 
+  person_1 = { name:  "Don Gately", occupation: "Live-in Staff" }
+  person_2 = { name:  "Joelle van Dyne", occupation: "Radio Personality" }
+  person_3 = { name:  "Pat Monteseian", occupation: "Staff" }
+  person_4 = { name:  "Kate Gompert", occupation: "None" }
+  person_5 = { name:  "Bruce Green", occupation: "Fan of Mildred" }
   
-  # Using Array literal syntax only, build a nested array that uses the data in
-  # held in the constants
+  new_arr = [person_1, person_2, person_3, person_4, person_5]
 end
 
 def aoh_lookup(aoh, row, key)
